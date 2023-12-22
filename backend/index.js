@@ -2,9 +2,16 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors'); // Import the cors package
 const bodyParser = require('body-parser');
 
 const app = express();
+// Example with specific origin allowed
+app.use(cors({
+  origin: 'https://3001-lskit-shopnode-nzbi8pq8w1c.ws-us107.gitpod.io', // Replace with your Next.js app's URL
+  credentials: true, // Include credentials in CORS requests if needed
+}));
+
 const port = 3000;
 
 // Load MongoDB connection string from .env file
