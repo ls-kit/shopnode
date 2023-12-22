@@ -3,7 +3,7 @@ import axios from 'axios';
 import styles from '../styles/PostData.module.css'; // Import the CSS module
 import WebsiteList from '../pages/WebsiteList';
 
-const apiEndpoint = 'https://3000-lskit-shopnode-nzbi8pq8w1c.ws-us107.gitpod.io/api/websites';
+const apiEndpoint = process.env.NEXT_PUBLIC_API_URL;
 
 const PostData = () => {
   const [formData, setFormData] = useState({

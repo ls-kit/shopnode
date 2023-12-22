@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from '../styles/WebsiteList.module.css';
 
-const apiEndpoint = 'https://3000-lskit-shopnode-nzbi8pq8w1c.ws-us107.gitpod.io/api/websites';
+const apiEndpoint = process.env.NEXT_PUBLIC_API_URL;
 
 const WebsiteList = () => {
   const [websites, setWebsites] = useState([]);
